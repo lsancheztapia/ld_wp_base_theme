@@ -1,0 +1,24 @@
+{
+  "name": "ld_wp_start_theme_css_compiler",
+  "version": "1.0.0",
+  "description": "LOGICAL Design",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lsancheztapia/dr4gons_heroe_quinones.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lsancheztapia/dr4gons_heroe_quinones/issues"
+  },
+  "homepage": "https://github.com/lsancheztapia/dr4gons_heroe_quinones#readme",
+  "devDependencies": {
+    "chokidar": "^1.7.0",
+    "gulp": "^3.9.1",
+    "gulp-sass": "^3.1.0"
+  }
+}
