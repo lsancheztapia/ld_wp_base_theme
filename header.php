@@ -26,18 +26,25 @@
 
 <header>
   <div class="container">
-  <div class="nav_logo">
-    <nav>
-      <button>Menu</button>
-      <?php wp_nav_menu( array( 'menu' => 'main-menu' ) ); ?>
-    </nav>
+
+    <div class="logo"><a href="/"><img src="" /></a></div>
+
+    <div class="top_info">
+      <h3>CALL: <a href="tel:18006478673">1-800-64-STORE</a></h3>
+      <p>(1-800-647-8673)<br>1586 Route 28 West Hurley, NY 12491</p>
+      <p><a href="">Email us</a></p>
+    </div>
+
+    <div class="menu">
+      <nav class="top_navigation">
+        <button>Menu</button>
+        <?php wp_nav_menu( array( 'theme_location' => 'main-menu' ) ); ?>
+      </nav>
+    </div>
+
+
   </div>
-  <div class="top_info">
-    <h3>CALL: <a href="tel:18006478673">1-800-64-STORE</a></h3>
-    <p>(1-800-647-8673)<br>1586 Route 28 West Hurley, NY 12491</p>
-    <p><a href="">Email us</a></p>
-  </div>
-  </div>
+
 </header>
 
 
