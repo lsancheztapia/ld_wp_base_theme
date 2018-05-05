@@ -8,7 +8,7 @@
   <meta name="description" content="">
   <meta name="author" content="">
 
-  <title>Blog Template for Bootstrap</title>
+  <title><title><?php wp_title(''); ?></title></title>
   <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
   <link href="<?php echo get_bloginfo( 'template_directory' );?>/css/style.css" rel="stylesheet">
 
