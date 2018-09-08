@@ -1,5 +1,8 @@
 <?php
 
+/**
+ *  Menu
+ */
 function registering_navigations() {
   register_nav_menus(
     array(
@@ -10,16 +13,19 @@ function registering_navigations() {
  }
  add_action( 'init', 'registering_navigations' );
 
+/**
+ * Widgets
+ */
 function registering_widgets_area() {
-        register_sidebar( array(
-                'name'          => __( 'Widget Area', 'custom_theme' ),
-                'id'            => 'sidebar-1',
-                'description'   => __( 'Add widgets here to appear in your sidebar.', 'custom_theme' ),
-                'before_widget' => '<aside id="%1$s" class="widget %2$s">',
-                'after_widget'  => '</aside>',
-                'before_title'  => '<h2 class="widget-title">',
-                'after_title'   => '</h2>',
-        ) );
+  register_sidebar( array(
+    'name'          => __( 'Widget Area', 'custom_theme' ),
+    'id'            => 'sidebar-1',
+    'description'   => __( 'Add widgets here to appear in your sidebar.', 'custom_theme' ),
+    'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+    'after_widget'  => '</aside>',
+    'before_title'  => '<h2 class="widget-title">',
+    'after_title'   => '</h2>',
+  ) );
 }
 add_action( 'widgets_init', 'registering_widgets_area' );
 
@@ -59,3 +65,25 @@ function get_last_blog_posts( $atts ){
   return $out;
 }
 add_shortcode( 'get-last-blog-posts', 'get_last_blog_posts' );
+
+/**
+ * Custom post types
+ */
+function create_event_register_posttype() { // for event registration
+
+  // not public 
+  register_post_type( 'event_register',
+  // CPT Options
+      array(
+          'labels' => array(
+              'name' => __( 'Event Registers' ),
+              'singular_name' => __( 'Event Register' )
+          ),
+          'public' => true,
+          'has_archive' => false,
+          'exclude_from_search' => true,
+          'rewrite' => array('slug' => 'event_registers'),
+      )
+  );
+};
+add_action( 'init', 'create_event_register_posttype' );
