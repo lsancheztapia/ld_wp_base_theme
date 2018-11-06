@@ -87,3 +87,15 @@ function create_event_register_posttype() { // for event registration
   );
 };
 add_action( 'init', 'create_event_register_posttype' );
+
+
+/**
+* run something in custom url
+**/
+add_action('parse_request', 'my_custom_url_handler');
+function my_custom_url_handler() {
+   if($_SERVER["REQUEST_URI"] == '/custom_url') {
+      echo "<h1>TEST</h1>";
+      exit();
+   }
+}
