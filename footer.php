@@ -1,7 +1,7 @@
 
 
   <footer>
-  	  <nav class="top_navigation">
+  	  <nav class="footer_navigation">
         <?php wp_nav_menu( array( 'theme_location' => 'footer-menu' ) ); ?>
       </nav>
   </footer>
