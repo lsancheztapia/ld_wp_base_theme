@@ -99,3 +99,17 @@ function my_custom_url_handler() {
       exit();
    }
 }
+
+// breadcrumb
+function the_breadcrumb() {
+  $thePost = get_post();
+  $html = $thePost->post_title;
+  $ancestors = get_post_ancestors( $thePost );
+  if ( $ancestors && is_array($ancestors) && count($ancestors) > 0 ) {
+    foreach ( $ancestors as $ancestorId ) {
+      $ancestor = get_post( $ancestorId );
+      $html = '<a href="' . get_permalink($ancestorId) . '">' . $ancestor->post_title . '</a> <span class="divition">/<span> ' . $html;
+    }
+  }
+  print '<div id="ld_wp_breadcrum">' . $html . '</div>';
+}
