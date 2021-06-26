@@ -1,2 +1,242 @@
 body {
-  color: blue; }
+  color: black;
+  font-family: 'Catamaran', sans-serif;
+  font-size: 18px; }
+  body .container {
+    max-width: 1170px;
+    width: 100%; }
+  body img {
+    max-width: 100%;
+    height: auto; }
+
+header .inner {
+  position: relative; }
+  header .inner .logo {
+    position: relative;
+    float: left;
+    padding-top: 10px;
+    z-index: 10; }
+  header .inner .header_rigth {
+    float: right;
+    padding: 43px 145px 0px 0px;
+    font-size: 14px; }
+    header .inner .header_rigth a {
+      color: black;
+      text-decoration: none; }
+  header .inner .header_center {
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    top: 96px;
+    text-align: center;
+    font-weight: 600;
+    font-size: 22px; }
+
+header .navigations {
+  clear: both;
+  text-align: center; }
+  header .navigations ul {
+    list-style-type: none;
+    margin: 0px;
+    padding: 0px; }
+    header .navigations ul li a {
+      font-weight: 600;
+      font-size: 16px;
+      text-decoration: none; }
+  header .navigations .menu {
+    display: inline-block; }
+    header .navigations .menu ul li {
+      display: inline-block; }
+      header .navigations .menu ul li a {
+        display: inline-block;
+        color: #494748;
+        padding: 0px 15px 10px 15px; }
+  header .navigations .hamburguer_navigation {
+    padding-left: 30px;
+    display: inline-block;
+    position: relative; }
+    header .navigations .hamburguer_navigation #mobile_nav_button {
+      padding: 0px 5px 0px 5px;
+      margin: 0px;
+      display: block;
+      background: transparent;
+      border: 0px; }
+      header .navigations .hamburguer_navigation #mobile_nav_button i {
+        font-size: 24px; }
+        header .navigations .hamburguer_navigation #mobile_nav_button i.fa-times {
+          display: none; }
+    header .navigations .hamburguer_navigation .menu-hamburger-menu-container {
+      display: none;
+      position: absolute;
+      right: 0px;
+      z-index: 100;
+      background-color: rgba(0, 0, 0, 0.7);
+      padding: 20px; }
+      header .navigations .hamburguer_navigation .menu-hamburger-menu-container li a {
+        color: white;
+        line-height: 30px;
+        font-weight: bold;
+        white-space: nowrap; }
+    header .navigations .hamburguer_navigation.clicked .menu-hamburger-menu-container {
+      display: block; }
+    header .navigations .hamburguer_navigation.clicked #mobile_nav_button i.fa-times {
+      display: inline-block; }
+    header .navigations .hamburguer_navigation.clicked #mobile_nav_button i.fa-bars {
+      display: none; }
+    header .navigations .hamburguer_navigation:hover .menu-hamburger-menu-container {
+      display: block; }
+
+.home_bottom_map img {
+  width: 100%;
+  height: auto; }
+
+.hero {
+  overflow: hidden; }
+  .hero > .metaslider {
+    overflow: visible; }
+    .hero > .metaslider .flex-viewport {
+      overflow: visible !important; }
+      .hero > .metaslider .flex-viewport li:not(.flex-active-slide) {
+        opacity: 0.5; }
+
+/* here internal pages*/
+body:not(.home) .top_content {
+  background-color: #dfdfdf;
+  padding-top: 40px;
+  padding-bottom: 40px; }
+
+body:not(.home) .top_content h1, body:not(.home) .top_content h2, body:not(.home) article h1, body:not(.home) article h2 {
+  color: #0095e1; }
+
+body:not(.home) .top_content h1, body:not(.home) article h1 {
+  font-size: 26px;
+  font-weight: bold; }
+
+body:not(.home) .top_content h2, body:not(.home) article h2 {
+  font-size: 22px;
+  font-weight: bold; }
+
+body:not(.home) article {
+  /* bathrooms page */
+  /* contat page */ }
+  body:not(.home) article figure {
+    text-align: center;
+    padding-bottom: 20px; }
+    body:not(.home) article figure figcaption {
+      padding-top: 10px;
+      font-style: italic;
+      font-size: 20px;
+      font-weight: bold; }
+  body:not(.home) article.post-83 ul {
+    list-style: none; }
+    body:not(.home) article.post-83 ul li {
+      position: relative;
+      padding-bottom: 10px; }
+  body:not(.home) article.post-83 ul li::before {
+    position: absolute;
+    top: -13px;
+    left: 10px;
+    content: "\2022";
+    color: #0095e1;
+    font-weight: bold;
+    font-size: 40px;
+    display: inline-block;
+    width: 10px;
+    margin-left: -1em;
+    /* Also needed for space (tweak if needed) */ }
+  body:not(.home) article.post-149 {
+    padding: 0px; }
+
+article.post-13 {
+  text-align: center; }
+  article.post-13 h2, article.post-13 h3 {
+    font-weight: bold; }
+  article.post-13 figure figcaption {
+    color: red;
+    font-weight: bold;
+    padding-top: 20px;
+    font-size: 26px; }
+
+article {
+  padding-top: 50px;
+  padding-bottom: 50px; }
+
+footer {
+  overflow: hidden;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  background-color: #122e37;
+  color: white; }
+  footer .logo {
+    float: left; }
+  footer .rigth {
+    float: right; }
+  footer .center {
+    padding-left: 100px;
+    padding-top: 20px; }
+    footer .center p {
+      max-width: 240px;
+      margin: 0 auto; }
+  footer a {
+    color: white;
+    text-decoration: none; }
+
+@media only screen and (max-width: 1150px) {
+  header .inner .header_rigth {
+    padding-right: 50px; }
+  header .inner .header_center {
+    margin-left: 150px; } }
+
+@media only screen and (max-width: 1000px) {
+  header .inner .header_center {
+    display: none; } }
+
+@media only screen and (max-width: 800px) {
+  header .inner .logo img {
+    height: 100px; }
+  header .inner .header_rigth {
+    padding-top: 15px; }
+  footer .logo {
+    margin-left: 100px;
+    text-align: center;
+    float: none; }
+  footer .center {
+    padding-left: 50px; }
+    footer .center p {
+      margin: 0; }
+  footer .rigth {
+    padding-right: 50px; } }
+
+@media only screen and (max-width: 500px) {
+  header {
+    padding-bottom: 20px; }
+    header .inner .header_rigth,
+    header .navigations > .menu {
+      display: none; }
+    header .navigations {
+      text-align: right;
+      position: absolute;
+      top: 30px;
+      right: 20px;
+      left: 0px; }
+      header .navigations .hamburguer_navigation {
+        position: static; }
+        header .navigations .hamburguer_navigation #mobile_nav_button i {
+          font-size: 35px; }
+        header .navigations .hamburguer_navigation .menu-hamburger-menu-container {
+          left: 0px;
+          right: -20px;
+          text-align: center; }
+          header .navigations .hamburguer_navigation .menu-hamburger-menu-container ul li a {
+            font-size: 20px;
+            line-height: 180%; }
+  footer .center {
+    padding-left: 0px;
+    text-align: center; }
+    footer .center p {
+      max-width: 100%; }
+  footer .rigth {
+    padding-top: 20px;
+    padding-right: 0px;
+    float: none;
+    text-align: center; } }

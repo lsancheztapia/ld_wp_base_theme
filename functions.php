@@ -7,6 +7,7 @@ function registering_navigations() {
   register_nav_menus(
     array(
       'main-menu' => 'Main Menu',
+      'top-menu' => 'Top Menu',
       'footer-menu' => 'Footer Menu'
      )
    );
@@ -72,17 +73,18 @@ add_shortcode( 'get-last-blog-posts', 'get_last_blog_posts' );
 function create_event_register_posttype() { // for event registration
 
   // not public 
-  register_post_type( 'event_register',
+  register_post_type( 'house',
   // CPT Options
       array(
           'labels' => array(
-              'name' => __( 'Event Registers' ),
-              'singular_name' => __( 'Event Register' )
+              'name' => __( 'Houses' ),
+              'singular_name' => __( 'House' )
           ),
           'public' => true,
-          'has_archive' => false,
+          'has_archive' => true,
           'exclude_from_search' => true,
-          'rewrite' => array('slug' => 'event_registers'),
+          'rewrite' => array('slug' => 'house'),
+
       )
   );
 };

@@ -1,1 +1,317 @@
-body {color:blue}
+body {
+  color: black;
+  font-family: 'Catamaran', sans-serif;
+  font-size: 18px;
+  .container {
+    max-width: 1170px;
+    width: 100%;
+  }
+  img {
+    max-width: 100%; height: auto;
+  }
+}
+header {
+  .inner {
+    position: relative;
+    .logo {
+      position: relative;
+      float:left;
+      padding-top: 10px;
+      z-index: 10;
+    }
+    .header_rigth {
+      float:right;
+      padding: 43px 145px 0px 0px;
+      font-size: 14px;
+      a {
+        color: black;
+        text-decoration:none;
+      }
+    }
+    .header_center {
+      position: absolute;
+      left: 0px;
+      right: 0px;
+      top:96px;
+      text-align:center;
+      font-weight: 600;
+      font-size:22px;
+    }
+  }
+  .navigations {
+    clear: both;
+    text-align: center;
+    ul {
+      list-style-type:: none;
+      margin: 0px;
+      padding: 0px;
+      li a {
+        font-weight: 600;
+        font-size: 16px;
+        text-decoration: none;
+      }
+    }
+    .menu {
+      display: inline-block;
+      ul li {
+        display: inline-block;
+        a {
+          display: inline-block;
+          color: #494748;
+          padding: 0px 15px 10px 15px;
+        }
+      }
+    }
+    .hamburguer_navigation {
+      padding-left: 30px;
+      display: inline-block;
+      position: relative;
+      #mobile_nav_button {
+        padding:0px 5px 0px 5px;
+        margin:0px;
+        display: block;
+        background: transparent;
+        border: 0px;
+        i {
+          font-size: 24px;
+          &.fa-times {display: none}
+        }
+      }
+      .menu-hamburger-menu-container {
+        display: none;
+        position: absolute;
+        right: 0px;
+        z-index: 100;
+        background-color: rgba(0, 0, 0, 0.7);
+        padding: 20px;
+        li a {
+          color: white;
+          line-height: 30px;
+          font-weight: bold;
+          white-space: nowrap;
+        }
+      }
+      &.clicked {
+        .menu-hamburger-menu-container { display: block }
+        #mobile_nav_button { 
+          i.fa-times {display: inline-block}
+          i.fa-bars {display: none}
+        }
+      }
+      &:hover {
+        .menu-hamburger-menu-container { display: block }
+      }
+    }
+  }
+}
+
+.home_bottom_map img {
+  width: 100%;
+  height: auto;
+}
+
+.hero {
+  overflow: hidden;
+  & > .metaslider {
+    overflow: visible;
+    .flex-viewport {
+      overflow: visible !important;
+      li:not(.flex-active-slide) {
+        opacity: 0.5;
+      }
+    }
+  }
+}
+
+
+
+/* here internal pages*/
+body:not(.home) {
+
+  .top_content {
+    background-color: #dfdfdf;
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+
+  .top_content , article {
+    h1, h2 { color: #0095e1; }
+    h1 {
+      font-size: 26px;
+      font-weight: bold;
+    }
+    h2 { font-size: 22px; font-weight: bold;}
+  }
+
+  article {
+    figure {
+      text-align: center;
+      padding-bottom: 20px;
+      figcaption {
+        padding-top: 10px;
+        font-style: italic;
+        font-size: 20px;
+        font-weight: bold;
+      }
+    }
+
+    /* bathrooms page */
+    &.post-83 {
+      ul {
+        list-style: none;
+        li {
+          position: relative;
+          padding-bottom: 10px;
+        }
+      }
+      ul li::before {
+        position: absolute;
+        top: -13px;
+        left: 10px;
+        content: "\2022";
+        color: #0095e1;
+        font-weight: bold;
+        font-size: 40px;
+        display: inline-block;
+        width: 10px;
+        margin-left: -1em; /* Also needed for space (tweak if needed) */
+      }
+    }
+
+    /* contat page */
+    &.post-149 { padding: 0px; }
+  }
+}
+
+article.post-13 {
+  text-align: center;
+  h2, h3 {
+    font-weight: bold;
+  }
+  figure figcaption {
+    color: red;
+    font-weight: bold;
+    padding-top: 20px;
+    font-size: 26px;
+  }
+}
+
+article {
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+footer {
+  overflow: hidden;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  .logo {
+    float: left;
+  }
+  background-color: #122e37;
+  color: white;
+  .rigth { float: right }
+
+  .center {
+    padding-left: 100px;
+    padding-top: 20px;
+    p {
+      max-width: 240px;
+      margin: 0 auto;
+    }
+  }
+  a {color: white; text-decoration: none;}
+}
+
+@media only screen and (max-width: 1150px) {
+
+  header .inner {
+    .header_rigth {
+      padding-right: 50px;
+    }
+    .header_center {
+      margin-left: 150px;
+    }
+  }
+
+}
+
+@media only screen and (max-width: 1000px) {
+  header .inner {
+    .header_center { display: none};
+  }
+
+}
+
+@media only screen and (max-width: 800px) {
+  header .inner {
+    .logo img {
+      height: 100px;
+    }
+    .header_rigth {
+      padding-top: 15px;
+    }
+  }
+  footer {
+    .logo {
+      margin-left: 100px;
+      text-align: center;
+      float: none;
+    }
+    .center {
+      padding-left: 50px;
+      p {
+        margin: 0;
+      }
+    }
+    .rigth {
+      padding-right: 50px;
+    }
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  header {
+    padding-bottom: 20px;
+    .inner .header_rigth,
+    .navigations > .menu {
+      display: none;
+    }
+    .navigations {
+      text-align: right;
+      position: absolute;
+      top: 30px;
+      right: 20px;
+      left: 0px;
+      .hamburguer_navigation {
+        position: static;
+        #mobile_nav_button i {
+          font-size: 35px;
+        }
+        .menu-hamburger-menu-container {
+          left: 0px;
+          right: -20px;
+          text-align: center;
+          ul li a {
+            font-size: 20px;
+            line-height: 180%;
+          }
+        }
+      }
+    }
+  }
+
+  footer {
+    .center {
+      padding-left: 0px;
+      text-align: center;
+      p { max-width: 100%; }
+    }
+    .rigth {
+      padding-top: 20px;
+      padding-right: 0px;
+      float: none;
+      text-align: center;
+    }
+  }
+}

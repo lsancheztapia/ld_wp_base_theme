@@ -1,11 +1,5 @@
 <?php get_header(); ?>
 
-<?php if (  is_front_page() ) : ?>
-  <div class="hero">
-
-    <?php echo do_shortcode('[metaslider id="49"]'); ?>
-  </div>
-<?php endif ?>
 
 <section>
 
@@ -26,11 +20,8 @@
 
 </section>
 
-<?php if ( is_front_page() ) : ?>
-  <div class="home_bottom_map">
-    <a href="https://goo.gl/maps/3an5wa3vEcV9iuo16" target="_blank"><img src='/wp-content/themes/moore/images/google_map.jpg' /></a>
-  </div>
-<?php endif; ?>
+<?php echo do_shortcode('[caldera_form id="CF60d6032fe5296"]'); ?>
+
 
 <?php get_footer(); ?>
 
